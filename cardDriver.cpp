@@ -43,7 +43,11 @@ int main()
 	std::cout <<	"Value of ex is : "	<< ex << std::endl;
 */
 //end part three
+	std::cout <<	"\n==============================================\n"
+		  <<	"Assigning full Deck"
+		  <<	"\n==============================================\n";
 
+	
 	card deck[52];
 	int cnt = 0;
 	//assignment loop
@@ -63,8 +67,24 @@ int main()
 		std::cout << "Card " << i+1 << ": " << deck[i] <<std::endl;
 	}
 
-	std::cout <<"This concludes the preliminary tests. " << std::endl;
 
+	std::cout <<	"\n==============================================\n"
+		  <<	"Reassigning full Deck to Ace of Spades"
+		  <<	"\n==============================================\n";
+
+	card ace(ACE,SPADES);		//ERROR ASSIGNING WRONG SUIT!!!!!
+	for (int i = 0; i < 52; i++)
+	{
+		deck[i] = ace;
+	}
+
+	//display loop
+	for (int i = 0; i < 52; i++)
+	{
+		std::cout << "Card " << i+1 << ": " << deck[i] <<std::endl;
+	}
+
+	std::cout <<"This concludes the preliminary tests. " << std::endl;
 
 return 0;
 }
